@@ -31,14 +31,20 @@ function activate(context) {
                     console.log(individualWords);
                     let lines = [];
                     let line = '';
+                    let needToAddLastLine = false;
                     for (let i = 0; i < individualWords.length; i++) {
                         const thisWord = individualWords[i];
                         if (line.length + thisWord.length <= maxLength) {
                             line += thisWord + ' ';
+                            needToAddLastLine = true;
                         } else {
                             lines.push(line);
                             line = thisWord + ' ';
+                            needToAddLastLine = false;
                         }
+                    }
+                    if (needToAddLastLine) {
+                        lines.push(line);
                     }
                     let replacement = '';
                     for (let i = 0; i < lines.length; i++) {
