@@ -48,7 +48,13 @@ function activate(context) {
                     }
                     let replacement = '';
                     for (let i = 0; i < lines.length; i++) {
-                        replacement += '"' + lines[i] + '" +\n';
+                        replacement += '"' + lines[i];
+                        if (i < lines.length - 1) {
+                            replacement += '" +\n';
+                        } else {
+                            replacement = replacement.trim();
+                            replacement += '"';
+                        }
                     }
                     editBuilder.replace(range, replacement);
                 })
