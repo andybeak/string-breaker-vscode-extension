@@ -27,8 +27,6 @@ function activate(context) {
                     const range = sel.isEmpty ? document.getWordRangeAtPosition(sel.start) || sel : sel;
                     const longString = document.getText(range);
                     const individualWords = longString.split(' ');
-                    console.log("individual words");
-                    console.log(individualWords);
                     let lines = [];
                     let line = '';
                     let needToAddLastLine = false;
