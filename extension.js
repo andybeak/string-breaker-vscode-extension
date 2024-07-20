@@ -46,7 +46,7 @@ function activate(context) {
                     }
                     let replacement = '';
                     for (let i = 0; i < lines.length; i++) {
-                        replacement += '"' + lines[i];
+                        replacement += '        "' + lines[i];
                         if (i < lines.length - 1) {
                             replacement += '" +\n';
                         } else {
