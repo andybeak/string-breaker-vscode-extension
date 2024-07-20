@@ -3,6 +3,7 @@
   "displayName": "String breaker",
   "description": "Break a long string into multiple lines using '+' syntax",
   "version": "0.0.1",
+  "publisher": "mysterydigitallimited",
   "engines": {
     "vscode": "^1.87.0"
   },
