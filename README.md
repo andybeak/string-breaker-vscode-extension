@@ -6,8 +6,9 @@ ruler of 80 characters. It uses LPC string syntax.
 
 ## packaging
 
-npx @vscode/vsce package
-code --install-extension string-breaker-0.0.1.vsix
+`npx @vscode/vsce package` will create the `.vsix` file that you can
+install with VS code.
+
 
 see https://code.visualstudio.com/api/working-with-extensions/publishing-extension#packaging-extensions
 see https://github.com/microsoft/vscode-vsce
